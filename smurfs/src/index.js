@@ -9,12 +9,13 @@ import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import rootReducer from './reducers'
-
+//import rootReducer from './reducers'
+import smurfReducer from './reducers'
 const middleware = [logger, thunk]
 
 const store = createStore(
-  rootReducer,
+  //rootReducer,
+  smurfReducer,
   composeWithDevTools(applyMiddleware(...middleware))
 )
 
